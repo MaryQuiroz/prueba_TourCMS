@@ -1,7 +1,8 @@
 # TourCMS API Integration Demo
 
-A professional PHP application that integrates with the TourCMS API to showcase and manage tour listings. This application provides a seamless interface for displaying tours, handling bookings, and managing tour-related content.
+This project was developed as part of a technical test, integrating the TourCMS API to display and manage tour listings. Although I am a junior developer, this project reflects my ability to work with external APIs, structure web projects, and create responsive interfaces.
 
+The main objective of this application is to provide a simple interface for displaying tour information, enabling basic search functionality, and handling tour-related data using the TourCMS API.
 ## 🚀 Features
 
 - Integration with TourCMS API
