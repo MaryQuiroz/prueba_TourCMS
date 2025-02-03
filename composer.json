@@ -1,6 +1,6 @@
 {
     "license": "MIT",
     "require": {
-        "tourcms/tourcms-php": "^3.9"
+            "tourcms/tourcms-php": "^4.0"
     }
 }

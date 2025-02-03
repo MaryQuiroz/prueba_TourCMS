@@ -1,14 +1,9 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "c9cfe8737d7a4397c3ee46778debb265",
     "packages": [
         {
             "name": "tourcms/tourcms-php",
             "version": "v4.9.0",
+            "version_normalized": "4.9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TourCMS/tourcms-php.git",
@@ -23,6 +18,7 @@
             "require": {
                 "php": ">=8.1"
             },
+            "time": "2024-09-23T13:58:52+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -30,6 +26,7 @@
                     "dev-master": "3.2.x-dev"
                 }
             },
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "TourCMS\\Utils\\": "src/"
@@ -56,16 +53,9 @@
                 "issues": "https://github.com/TourCMS/tourcms-php/issues",
                 "source": "https://github.com/TourCMS/tourcms-php/tree/v4.9.0"
             },
-            "time": "2024-09-23T13:58:52+00:00"
+            "install-path": "../tourcms/tourcms-php"
         }
     ],
-    "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {},
-    "prefer-stable": false,
-    "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "dev": true,
+    "dev-package-names": []
 }
