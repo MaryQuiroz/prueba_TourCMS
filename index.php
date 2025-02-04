@@ -1,31 +1,30 @@
 <?php
 // index.php
 
-// Incluir el autoloader de Composer
+// Include the Composer autoloader
 require __DIR__ . '/vendor/autoload.php';
 
-// Cargar las credenciales desde config.php
+// Load credentials from config.php
 $config = require __DIR__ . '/config.php';
 
 use TourCMS\Utils\TourCMS as TourCMS;
 
-// Configuración básica
+// Basic configuration
 $marketplace_id = $config['marketplace_id'];
 $api_key = $config['api_key'];
 $channel_id = $config['channel_id'];
 
-// Crear una instancia de TourCMS
+// Create an instance of TourCMS
 $tourcms = new TourCMS($marketplace_id, $api_key, 'simplexml');
 
-// Configurar el User-Agent (opcional)
-$tourcms->set_user_agent('Mi Sitio Web de Tours');
+// Set the User-Agent 
+$tourcms->set_user_agent('My Tours Website');
 
-// Realizar una búsqueda de tours
+// Perform a tour search
 $params = "country=ES&product_type=4";
-
 $result = $tourcms->search_tours($params, $channel_id);
 
-// Mostrar los resultados
+// Display the results
 if ($result && isset($result->tour)) {
     echo '<h1>Day Tours</h1>';
     foreach ($result->tour as $tour) {
@@ -37,19 +36,19 @@ if ($result && isset($result->tour)) {
         echo '<p><strong>Duración:</strong> ' . htmlspecialchars((string)$tour->duration_desc) . '</p>';
         echo '<p><strong>Ubicación:</strong> ' . htmlspecialchars((string)$tour->location) . '</p>';
         
-        // Mostrar imagen si está disponible
+        // Display image if available
         if (!empty($tour->thumbnail_image)) {
             echo '<img src="' . htmlspecialchars((string)$tour->thumbnail_image) . '" alt="' . htmlspecialchars((string)$tour->tour_name) . '">';
         }
 
-        // Botón "Book now"
+        // Button "Book now"
         echo '<p><a href="' . htmlspecialchars((string)$tour->book_url) . '" class="btn">Book now from ' . html_entity_decode(htmlspecialchars((string)$tour->from_price_display)) . '</a></p>';
         echo '</div>';
         echo '<hr>';
     
 }
 } else {
-    echo '<h1>No se encontraron tours.</h1>';
+    echo '<h1>No tours found.</h1>';
 }
 ?>
 
